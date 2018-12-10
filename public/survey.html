@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+</head>
+<body>
+    <style>
+    .form-control{
+     width:40%   
+    }
+    .chose-select{
+        width:40%
+    }
+        </style>
+    <div class="container">
+        <div class="jumbotron">
+    <h2 class="text-center display-4">Survey!</h2>
+    </div>
+        </div>
+    <div class="card">        
+    <h3>Name(Required)</h3>
+    <input type = "text" id= "name" class="form-control">
+    <h3>What do you look like? (Required)</h3>
+    <input type = "text" id= "photo" class="form-control">
+
+    <h3>Question 1</h3>
+    <h4>You are a social butterfly</h4>
+    <select class="chosen-select"id="question1">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 2</h3>
+    <h4>You prefer a walk in a park then going for a drive</h4>
+    <select class="chosen-select"id="question2">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 3</h3>
+    <h4>You would rather cook then eat out</h4>
+    <select class="chosen-select"id="question3">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 4</h3>
+    <h4>You are a social butterfly</h4>
+    <select class="chosen-select"id="question4">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 5</h3>
+    <h4>You are a social butterfly</h4>
+    <select class="chosen-select"id="question5">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 6</h3>
+    <h4>You are a social butterfly</h4>
+    <select class="chosen-select"id="question6">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 7</h3>
+    <h4>You would rather sit at home with a movie then go out</h4>
+    <select class="chosen-select"id="question7">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 8</h3>
+    <h4>You are </h4>
+    <select class="chosen-select"id="question8">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 9</h3>
+    <h4>You are a social butterfly</h4>
+    <select class="chosen-select"id="question9">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h3>Question 10</h3>
+    <h4>You are a social butterfly</h4>
+    <select class="chosen-select"id="question10">
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    </div>
+    <script type=text/javascript>
+        $(".submit".on("click", function(){
+            event.prevendefault();
+            var userData = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                results = [
+                q1: $("#question1").val(),
+                q2: $("#question2").val(),
+                q3: $("#question3").val(),
+                q4: $("#question4").val(),
+                q5: $("#question5").val(),
+                q6: $("#question6").val(),
+                q7: $("#question7").val(),
+                q8: $("#question8").val(),
+                q9: $("#question9").val(),
+                q10: $("#question10").val()
+            ]
+        }
+        let currentURL = window.location.origin;
+        $.post(currentURL + "/api/friends", newSurvey,
+        function(data){
+            if (data.error === true){
+                alert(data.message)
+            }
+            else if (data === true && data.error === false)
+            alert ("Best Friend Match Is:" + );
+        } else if (data === false && data.error = false){
+            alert ("No friends matching.")
+        }
+    });
+});
+        </script>
+</body>
+</html>
